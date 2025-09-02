@@ -1,103 +1,71 @@
-import Image from "next/image";
+// app/page.tsx
+import { Card } from '@/components/Card';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    // The space-y-6 class will automatically handle the spacing for all cards
+    <div className="space-y-6 pb-24"> 
+      {/* --- Existing Cards --- */}
+      <Card
+        imageSrc="/aadhar.png"
+        title="DBT"
+        description="Direct Benefit Tranfer, Get your Bank Account Aadhaar seeded."
+        linkText="Learn More"
+        linkHref="/learn"
+        bgColor="bg-blue-50"
+        borderColor="border-blue-200"
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Card
+        imageSrc="/promotion-student.png"
+        title="Promotion"
+        description="Spread the word, Download Ready-to-use promotional content."
+        linkText="Download"
+        linkHref="/promotion"
+        bgColor="bg-pink-50"
+        borderColor="border-pink-200"
+      />
+
+      <Card
+        imageSrc="/rbi-logo.png"
+        title="Check Status"
+        description="Check your bank account seeding status with Aadhaar."
+        linkText="Check Now"
+        linkHref="https://resident.uidai.gov.in/bank-mapper" // External Link
+        bgColor="bg-green-50"
+        borderColor="border-green-200"
+      />
+
+      {/* --- NEW CARDS START HERE --- */}
+      <Card
+        imageSrc="/qr-code.png"
+        title="QR Codes"
+        description="Generate QR codes for promotion through notice boards."
+        linkText="Generate Now"
+        linkHref="/qr-generator"
+        bgColor="bg-amber-100"
+        borderColor="border-amber-200"
+      />
+
+      <Card
+        imageSrc="/sms-gateway.png"
+        title="e-SMS Gateway"
+        description="Send bulk messages in your area for DBT awareness."
+        linkText="Send Now"
+        linkHref="/sms-gateway"
+        bgColor="bg-cyan-100"
+        borderColor="border-cyan-200"
+      />
+
+      <Card
+        imageSrc="/rbi-logo.png"
+        title="Bank Info"
+        description="Get DBT related info and documents as per your bank."
+        linkText="Check Now"
+        linkHref="/bank-info"
+        bgColor="bg-gray-200"
+        borderColor="border-gray-300"
+      />
     </div>
   );
 }
