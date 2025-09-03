@@ -17,8 +17,8 @@ export const Card = ({ imageSrc, title, description, linkText, linkHref, bgColor
         <Image 
           src={imageSrc} 
           alt={title} 
-          layout="fill" 
-          objectFit="cover" // This ensures the image covers the container
+          fill
+          className="object-cover"
         />
       </div>
       <div>

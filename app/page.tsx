@@ -27,7 +27,7 @@ export default function Home() {
       />
 
       <Card
-        imageSrc="/rbi-logo.png"
+        imageSrc="/check.png"
         title="Check Status"
         description="Check your bank account seeding status with Aadhaar."
         linkText="Check Now"
